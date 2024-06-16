@@ -163,6 +163,7 @@
 		top: 0;
 		left: 0;
 		width: 100%;
+		border-radius: 0px 25px 17px 0px;
 		height: 55%;
 		background: linear-gradient(
 			to bottom,
@@ -179,8 +180,9 @@
 		position: absolute;
 		bottom: 0;
 		left: 0;
-		width: 100%;
+		width: 92%;
 		height: 3px;
+		border-radius: 0px 0px 17px 0px;
 		background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%);
 	}
 
