@@ -15,10 +15,12 @@
 	});
 </script>
 
-<div class={`mainContainer ${isVisible ? 'fade-in show' : ''}`}>
-	{#if showDesktop}
-		<Desktop />
-	{/if}
+<div class="show-large">
+	<div class={`mainContainer ${isVisible ? 'fade-in show' : ''}`}>
+		{#if showDesktop}
+			<Desktop />
+		{/if}
+	</div>
 </div>
 
 <style>
@@ -42,5 +44,20 @@
 
 	.show {
 		opacity: 1;
+	}
+
+	.show-small {
+		display: none;
+	}
+	.show-large {
+		display: contents;
+	}
+	@media (max-width: 1090px) {
+		.show-small {
+			display: contents;
+		}
+		.show-large {
+			display: none;
+		}
 	}
 </style>

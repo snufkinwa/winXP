@@ -319,7 +319,7 @@
 		display: contents;
 	}
 
-	@media (max-width: 1268px) {
+	@media (max-width: 1088px) {
 		.show-small {
 			display: contents;
 		}

@@ -1,5 +1,8 @@
 <title>Janay King || Portfolio</title>
-<body><slot /></body>
+
+<body>
+	<slot />
+</body>
 
 <style global>
 	:root {
@@ -30,7 +33,7 @@
 		place-items: center;
 		max-width: 100vw;
 		max-height: 100vh;
-		background: black; /* Use hex code for consistency */
+		background: #000;
 		transition: background var(--transition-duration) var(--transition-timing-function);
 	}
 </style>
