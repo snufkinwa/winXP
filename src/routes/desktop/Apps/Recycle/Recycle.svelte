@@ -6,7 +6,7 @@
 	import go from '$lib/assets/windowsIcons/290.png';
 	import search from '$lib/assets/windowsIcons/Search.png';
 	import computer from '$lib/assets/windowsIcons/676(16x16).png';
-	import back from '$lib/assets/windowsIcons/back.png';
+	import back from '$lib/assets/windowsIcons/Back.png';
 	import forward from '$lib/assets/windowsIcons/forward.png';
 	import up from '$lib/assets/windowsIcons/up.png';
 	import control from '$lib/assets/windowsIcons/300(16x16).png';
