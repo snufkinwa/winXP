@@ -63,6 +63,8 @@
 		{/if}
 		<div class="taskbar__apps">
 			{#each $appState.apps as app (app.id)}
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
+				<!-- svelte-ignore a11y-no-static-element-interactions -->
 				<div
 					class="taskbar__app {app.id === $appState.focusedAppId ? 'active' : ''}"
 					on:click={() => handleAppClick(app.id)}
@@ -285,11 +287,10 @@
 	.taskbar__app.active {
 		background: #2d5daf;
 		box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3);
-		border-left: 2px solid #0b2042; 
-		border-top: 2px solid #0b2042; 
+		border-left: 2px solid #0b2042;
+		border-top: 2px solid #0b2042;
 		border-right: #003c74 1px solid;
 		border-bottom: #003c74 1px solid;
-		
 	}
 
 	.taskbar__app img {

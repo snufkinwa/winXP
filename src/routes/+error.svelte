@@ -108,14 +108,6 @@
 		max-width: 70rem;
 	}
 
-	h1 {
-		background-color: silver;
-		color: #00a;
-		padding: 0 1rem;
-		font-size: 1rem;
-		display: inline-block;
-	}
-
 	ul {
 		list-style-type: none;
 		padding-left: 1.5em;

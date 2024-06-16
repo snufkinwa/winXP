@@ -88,6 +88,7 @@
 				<input type="text" name="" id="" />
 				<button>search</button>
 			</div>
+			<!-- svelte-ignore a11y-invalid-attribute -->
 			<div class="links"><a href="#">Help</a>&nbsp;|&nbsp;<a href="#">SignUp</a></div>
 		</div>
 		<div class="nav-middle"></div>
@@ -121,7 +122,13 @@
 						alt="avatar"
 					/>
 					<div class="media-view">
-						View My: <a href="#/">Pics</a>&nbsp;|&nbsp;<a href="#">Videos</a>
+						<!-- svelte-ignore a11y-invalid-attribute -->
+						<!-- svelte-ignore a11y-invalid-attribute -->
+						<!-- svelte-ignore a11y-invalid-attribute -->
+						<!-- svelte-ignore a11y-invalid-attribute -->
+						<!-- svelte-ignore a11y-invalid-attribute -->
+						<!-- svelte-ignore a11y-invalid-attribute -->
+						View My: <a href="#/">Pics</a>&nbsp;|&nbsp;<a href="#/">Videos</a>
 					</div>
 				</div>
 				<div class="details">
@@ -141,17 +148,33 @@
 				<div class="panel-header">Contacting Janay King</div>
 				<div class="buttons-container">
 					<div class="row">
+						<!-- svelte-ignore a11y-missing-attribute -->
+						<!-- svelte-ignore a11y-missing-attribute -->
+						<!-- svelte-ignore a11y-missing-content -->
 						<a intent="reply" class="btn act-1"></a>
+						<!-- svelte-ignore a11y-missing-content -->
 						<a href="#/" class="btn act-2"></a>
 					</div>
+					<!-- svelte-ignore a11y-missing-content -->
 					<div class="row">
+						<!-- svelte-ignore a11y-missing-attribute -->
+						<!-- svelte-ignore a11y-invalid-attribute -->
+						<!-- svelte-ignore a11y-invalid-attribute -->
 						<a intent="add" class="btn act-3"></a>
+						<!-- svelte-ignore a11y-invalid-attribute -->
 						<a href="#" class="btn act-4"></a>
 					</div>
 					<div class="row">
+						<!-- svelte-ignore a11y-missing-content -->
+						<!-- svelte-ignore a11y-missing-content -->
+						<!-- svelte-ignore a11y-missing-content -->
+						<!-- svelte-ignore a11y-missing-content -->
 						<a href="#/" class="btn act-5"></a>
+						<!-- svelte-ignore a11y-missing-content -->
 						<a href="#/" class="btn act-6"></a>
 					</div>
+					<!-- svelte-ignore a11y-missing-content -->
+					<!-- svelte-ignore a11y-missing-content -->
 					<div class="row">
 						<a href="#/" class="btn act-7"></a>
 						<a href="#/" class="btn act-8"></a>
@@ -161,108 +184,111 @@
 			<div class="small-panel m-details-panel">
 				<div class="panel-header">Janay King's Interests</div>
 				<div class="row">
-				  <div class="sm-col">
-					<p>General:</p>
-				  </div>
-				  <div class="sm-col">
-					<p>Internet, Blockchain, Machine Learning, Quantum Computing</p>
-				  </div>
+					<div class="sm-col">
+						<p>General:</p>
+					</div>
+					<div class="sm-col">
+						<p>Internet, Blockchain, Machine Learning, Quantum Computing</p>
+					</div>
 				</div>
 				<div class="row">
-				  <div class="sm-col">
-					<p>Music:</p>
-				  </div>
-				  <div class="sm-col">
-					<p>Game instrumentals and EDM</p>
-				  </div>
+					<div class="sm-col">
+						<p>Music:</p>
+					</div>
+					<div class="sm-col">
+						<p>Game instrumentals and EDM</p>
+					</div>
 				</div>
 				<div class="row">
-				  <div class="sm-col">
-					<p>Movies:</p>
-				  </div>
-				  <div class="sm-col">
-					<p>Fantasy films, Legend(1985) and scifi flicks</p>
-				  </div>
+					<div class="sm-col">
+						<p>Movies:</p>
+					</div>
+					<div class="sm-col">
+						<p>Fantasy films, Legend(1985) and scifi flicks</p>
+					</div>
 				</div>
 				<div class="row">
-				  <div class="sm-col">
-					<p>Television:</p>
-				  </div>
-				  <div class="sm-col">
-					<p>Delicious in Dungeon, Bridgerton</p>
-				  </div>
+					<div class="sm-col">
+						<p>Television:</p>
+					</div>
+					<div class="sm-col">
+						<p>Delicious in Dungeon, Bridgerton</p>
+					</div>
 				</div>
 				<div class="row">
-				  <div class="sm-col">
-					<p>Goals:</p>
-				  </div>
-				  <div class="sm-col">
-					<p>To become a leading expert in AI and Blockchain, contribute to open-source projects, and develop innovative tech solutions.</p>
-				  </div>
+					<div class="sm-col">
+						<p>Goals:</p>
+					</div>
+					<div class="sm-col">
+						<p>
+							To become a leading expert in AI and Blockchain, contribute to open-source projects,
+							and develop innovative tech solutions.
+						</p>
+					</div>
 				</div>
-			  </div>
-			  
-			  <div class="small-panel m-details-panel">
+			</div>
+
+			<div class="small-panel m-details-panel">
 				<div class="panel-header">Janay King's Details</div>
 				<div class="row">
-				  <div class="sm-col">
-					<p>Status:</p>
-				  </div>
-				  <div class="sm-col">
-					<p>Student</p>
-				  </div>
+					<div class="sm-col">
+						<p>Status:</p>
+					</div>
+					<div class="sm-col">
+						<p>Student</p>
+					</div>
 				</div>
 				<div class="row">
-				  <div class="sm-col">
-					<p>Here for:</p>
-				  </div>
-				  <div class="sm-col">
-					<p>skills, Collaborators, Work opportunities</p>
-				  </div>
+					<div class="sm-col">
+						<p>Here for:</p>
+					</div>
+					<div class="sm-col">
+						<p>skills, Collaborators, Work opportunities</p>
+					</div>
 				</div>
 				<div class="row">
-				  <div class="sm-col">
-					<p>Hobbies:</p>
-				  </div>
-				  <div class="sm-col">
-					<p>Coding, Reading Tech Blogs</p>
-				  </div>
+					<div class="sm-col">
+						<p>Hobbies:</p>
+					</div>
+					<div class="sm-col">
+						<p>Coding, Reading Tech Blogs</p>
+					</div>
 				</div>
 				<div class="row">
-				  <div class="sm-col">
-					<p>Hometown:</p>
-				  </div>
-				  <div class="sm-col">
-					<p>Ansbach, Germany</p>
-				  </div>
+					<div class="sm-col">
+						<p>Hometown:</p>
+					</div>
+					<div class="sm-col">
+						<p>Ansbach, Germany</p>
+					</div>
 				</div>
 				<div class="row">
-				  <div class="sm-col">
-					<p>Certifications:</p>
-				  </div>
-				  <div class="sm-col">
-					<p>Python Essentials I, Python Essentials II</p>
-				  </div>
+					<div class="sm-col">
+						<p>Certifications:</p>
+					</div>
+					<div class="sm-col">
+						<p>Python Essentials I, Python Essentials II</p>
+					</div>
 				</div>
 				<div class="row">
-				  <div class="sm-col">
-					<p>Ethnicity:</p>
-				  </div>
-				  <div class="sm-col">
-					<p>Mixed</p>
-				  </div>
+					<div class="sm-col">
+						<p>Ethnicity:</p>
+					</div>
+					<div class="sm-col">
+						<p>Mixed</p>
+					</div>
 				</div>
 				<div class="row">
-				  <div class="sm-col">
-					<p>Occupation:</p>
-				  </div>
-				  <div class="sm-col">
-					<p>Computer Science Student</p>
-				  </div>
+					<div class="sm-col">
+						<p>Occupation:</p>
+					</div>
+					<div class="sm-col">
+						<p>Computer Science Student</p>
+					</div>
 				</div>
-			  </div>
-			  </div>
-			  
+			</div>
+		</div>
+
 		<div class="col user-content">
 			<div class="top-banner">
 				<h1>Janay King is in your extended network</h1>
@@ -328,6 +354,7 @@
 					<div class="comment user03324">
 						<div class="dp-group">
 							<a href="#/" class="prof-name">Elon M&sup2; </a>
+							<!-- svelte-ignore a11y-img-redundant-alt -->
 							<img
 								src="https://pics.craiyon.com/2023-06-28/e97ccd283e0740fab888df91e834520e.webp"
 								alt="profile photo"
@@ -347,7 +374,11 @@
 								</div>
 							</div>
 							<div class="message-body">
-								<img src ="https://xpportfoliowebsite.s3.amazonaws.com/Images/iNSk.gif" style="width: 100%;" alt="insk" />
+								<img
+									src="https://xpportfoliowebsite.s3.amazonaws.com/Images/iNSk.gif"
+									style="width: 100%;"
+									alt="insk"
+								/>
 							</div>
 						</div>
 					</div>
@@ -766,7 +797,6 @@
 		font-size: 12px;
 		line-height: 16px;
 	}
-
 
 	footer {
 		display: flex;

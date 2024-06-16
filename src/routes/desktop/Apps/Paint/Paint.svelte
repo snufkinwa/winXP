@@ -1,5 +1,4 @@
 <script>
-	export let isFocus = false;
 </script>
 
 <div class="paint-container">

@@ -46,6 +46,7 @@
 <ul bind:this={dropDown} class="drop-down-list" role="menu" aria-label="Window Options">
 	{#each Object.keys(items) as name}
 		<li class="drop-down-item" role="presentation">
+			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<div
 				role="menuitem"
 				tabindex="0"
