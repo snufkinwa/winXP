@@ -73,7 +73,8 @@ You'll find the classic sections—About, Projects, and Contact—inside the Max
 - **Add more applications:** Plan to include additional applications to enhance the desktop experience.
 - **Improve responsiveness:** Ensure the layout is fully responsive and works well on different screen sizes.
 - **Refine UI/UX:** Make further improvements to the user interface and experience based on feedback.
-- **Bug fixes:** Continue to identify and fix any bugs that may arise. -**Minimize Code/Refactor** This is my first time using Sveltekit, I love it because its easier to get started. The drawback is there aren't many examples of standards on how projects should be structured. This will a continous improvement.
+- **Bug fixes:** Continue to identify and fix any bugs that may arise.
+- **Minimize Code/Refactor** This is my first time using Sveltekit, I love it because its easier to get started. The drawback is there aren't many examples of standards on how projects should be structured. This will a continous improvement.
 
 ## License
 
