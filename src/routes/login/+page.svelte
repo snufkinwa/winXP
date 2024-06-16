@@ -1,7 +1,6 @@
 <script>
 	import { createEventDispatcher, onMount } from 'svelte';
 	import { goto } from '$app/navigation';
-	import MediaQuery from '$lib/components/MediaQuery.svelte';
 	import risk from '$lib/assets/windowsIcons/897(32x32).png';
 	import info from '$lib/assets/windowsIcons/1001.ico';
 
@@ -85,111 +84,101 @@
 	});
 </script>
 
-<MediaQuery query="(min-width: 1280px)" let:matches>
-	{#if matches}
-		<div class="header" />
-		<main>
-			<div class="img">
-				<img src={loginLogo} alt="Logo Windows XP" />
-				<h1>To begin, click your user name</h1>
-			</div>
-			<div class="line"></div>
-			<div class="users">
-				<section
-					class="janay"
-					role="button"
-					tabindex="0"
-					on:click={() => toggleInput('janay')}
-					on:keydown={(event) => handleKeyPress(event, () => toggleInput('janay'))}
-					class:active={activeUser === 'janay'}
-				>
-					<div class="iconA"></div>
-					<div class="user">
-						<h3>Janay King</h3>
-						{#if activeUser === 'janay'}
-							<p>Type your password</p>
-							<!-- svelte-ignore a11y-click-events-have-key-events -->
-							<!-- svelte-ignore a11y-no-static-element-interactions -->
-							<div class="input" role="button" tabindex="0" on:click|stopPropagation>
-								<div style="position: relative;">
-									<input type="password" bind:value={password} on:keydown={handleKeyPress} />
-									<div class="balloon-container">
-										<Balloon
-											start={startBalloon}
-											startAfter={0}
-											duration={15000}
-											headerText="Did you forget your password?"
-											firstText="Please type your password again."
-											secondText="Be sure to use correct uppercase and lowercase letters."
-											imageSrc={risk}
-											showButton={true}
-											on:close={() => (startBalloon = false)}
-										/>
-									</div>
-								</div>
-								<button class="green" on:click|preventDefault={handleSubmit}>
-									<img src={rightArrow} alt="" />
-								</button>
-								<div style="position: relative;">
-									<button class="blue" on:click|preventDefault={showHint}>
-										<img src={questionMark} alt="" />
-									</button>
-									<div class="balloonHint-container">
-										<Balloon
-											start={showHintBalloon}
-											startAfter={0}
-											duration={15000}
-											headerText="Password Hint:"
-											firstText="|ψ⟩ = α|0⟩ + β|1⟩, where |α|^2 + |β|^2 = 1"
-											secondText=""
-											imageSrc={info}
-											on:close={() => (showHintBalloon = false)}
-										/>
-									</div>
+<div class="show-large">
+	<div class="header" />
+	<main>
+		<div class="img">
+			<img src={loginLogo} alt="Logo Windows XP" />
+			<h1>To begin, click your user name</h1>
+		</div>
+		<div class="line"></div>
+		<div class="users">
+			<section
+				class="janay"
+				role="button"
+				tabindex="0"
+				on:click={() => toggleInput('janay')}
+				on:keydown={(event) => handleKeyPress(event, () => toggleInput('janay'))}
+				class:active={activeUser === 'janay'}
+			>
+				<div class="iconA"></div>
+				<div class="user">
+					<h3>Janay King</h3>
+					{#if activeUser === 'janay'}
+						<p>Type your password</p>
+						<!-- svelte-ignore a11y-click-events-have-key-events -->
+						<!-- svelte-ignore a11y-no-static-element-interactions -->
+						<div class="input" role="button" tabindex="0" on:click|stopPropagation>
+							<div style="position: relative;">
+								<input type="password" bind:value={password} on:keydown={handleKeyPress} />
+								<div class="balloon-container">
+									<Balloon
+										start={startBalloon}
+										startAfter={0}
+										duration={15000}
+										headerText="Did you forget your password?"
+										firstText="Please type your password again."
+										secondText="Be sure to use correct uppercase and lowercase letters."
+										imageSrc={risk}
+										showButton={true}
+										on:close={() => (startBalloon = false)}
+									/>
 								</div>
 							</div>
-						{/if}
-					</div>
-				</section>
-				<section
-					class="guest"
-					role="button"
-					tabindex="0"
-					on:click={handleGuestLogin}
-					on:keypress={(event) => handleKeyPress(event, handleGuestLogin)}
-					class:active={activeUser === 'guest'}
-				>
-					<div class="iconB"></div>
-					<div class="user">
-						<p>Guest</p>
-					</div>
-				</section>
-			</div>
-		</main>
-		<footer>
-			<div class="btn">
-				<button> <img src={turnOff} alt="" /> </button>
-				<p>Turn off computer</p>
-			</div>
-			<div class="informations">
-				<p>After you log on, you can add or change accounts</p>
-				<p>Just go to your Control Panel and click User Accounts</p>
-			</div>
-		</footer>
-	{/if}
-</MediaQuery>
+							<button class="green" on:click|preventDefault={handleSubmit}>
+								<img src={rightArrow} alt="" />
+							</button>
+							<div style="position: relative;">
+								<button class="blue" on:click|preventDefault={showHint}>
+									<img src={questionMark} alt="" />
+								</button>
+								<div class="balloonHint-container">
+									<Balloon
+										start={showHintBalloon}
+										startAfter={0}
+										duration={15000}
+										headerText="Password Hint:"
+										firstText="|ψ⟩ = α|0⟩ + β|1⟩, where |α|^2 + |β|^2 = 1"
+										secondText=""
+										imageSrc={info}
+										on:close={() => (showHintBalloon = false)}
+									/>
+								</div>
+							</div>
+						</div>
+					{/if}
+				</div>
+			</section>
+			<section
+				class="guest"
+				role="button"
+				tabindex="0"
+				on:click={handleGuestLogin}
+				on:keypress={(event) => handleKeyPress(event, handleGuestLogin)}
+				class:active={activeUser === 'guest'}
+			>
+				<div class="iconB"></div>
+				<div class="user">
+					<p>Guest</p>
+				</div>
+			</section>
+		</div>
+	</main>
+	<footer>
+		<div class="btn">
+			<button> <img src={turnOff} alt="" /> </button>
+			<p>Turn off computer</p>
+		</div>
+		<div class="informations">
+			<p>After you log on, you can add or change accounts</p>
+			<p>Just go to your Control Panel and click User Accounts</p>
+		</div>
+	</footer>
+</div>
 
-<MediaQuery query="(min-width: 481px) and (max-width: 1280px)" let:matches>
-	{#if matches}
-		<div class="root tablet">tablet</div>
-	{/if}
-</MediaQuery>
-
-<MediaQuery query="(min-width: 480px)" let:matches>
-	{#if !matches}
-		<NoCellphones />
-	{/if}
-</MediaQuery>
+<div class="show-small">
+	<NoCellphones />
+</div>
 
 <style>
 	@font-face {
@@ -323,7 +312,21 @@
 		position: relative;
 		top: 20px;
 	}
+	.show-small {
+		display: none;
+	}
+	.show-large {
+		display: contents;
+	}
 
+	@media (max-width: 1268px) {
+		.show-small {
+			display: contents;
+		}
+		.show-large {
+			display: none;
+		}
+	}
 	main .img h1 {
 		font-family: 'Source Sans Pro', sans-serif;
 		color: white;

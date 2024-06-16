@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
-	import MediaQuery from '$lib/components/MediaQuery.svelte';
+	import NoCellphones from '$lib/components/NoCellphones.svelte';
 	let isLoading = true;
 	let audio;
 	function playAudio() {
@@ -19,29 +19,25 @@
 			isLoading = false;
 			goto('/login');
 			playAudio();
-		}, 6000);
+		}, 9000);
 	});
 </script>
 
-<MediaQuery query="(min-width: 1280px)" let:matches>
-	{#if matches}
-		<div class="page-container">
-			{#if isLoading}
-				<div class="windows__bg" class:fade-out={!isLoading}></div>
-			{:else}
-				<div class="content" class:fade-in={!isLoading}>
-					<slot />
-				</div>
-			{/if}
-		</div>
-	{/if}
-</MediaQuery>
+<div class="show-large">
+	<div class="page-container">
+		{#if isLoading}
+			<div class="windows__bg" class:fade-out={!isLoading}></div>
+		{:else}
+			<div class="content" class:fade-in={isLoading}>
+				<slot />
+			</div>
+		{/if}
+	</div>
+</div>
 
-<MediaQuery query="(min-width: 481px) and (max-width: 1280px)" let:matches>
-	{#if matches}
-		<div class="page-container"></div>
-	{/if}
-</MediaQuery>
+<div class="show-small">
+	<NoCellphones />
+</div>
 
 <style>
 	.page-container {
@@ -70,9 +66,24 @@
 	.content {
 		opacity: 0;
 		transition: opacity 1s ease-in;
-		background-color: #000000;
 	}
 	.content.fade-in {
 		opacity: 1;
+	}
+
+	.show-small {
+		display: none;
+	}
+	.show-large {
+		display: contents;
+	}
+
+	@media (max-width: 1268px) {
+		.show-small {
+			display: contents;
+		}
+		.show-large {
+			display: none;
+		}
 	}
 </style>

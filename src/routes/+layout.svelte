@@ -17,13 +17,12 @@
 		-moz-osx-font-smoothing: grayscale;
 
 		--transition-duration: 0.3s;
-    --transition-timing-function: ease-in-out;
-}
+		--transition-timing-function: ease-in-out;
+	}
 
 	* {
-    transition: all var(--transition-duration) var(--transition-timing-function);
-}
-
+		transition: all var(--transition-duration) var(--transition-timing-function);
+	}
 
 	body {
 		overflow: hidden;
@@ -31,7 +30,7 @@
 		place-items: center;
 		max-width: 100vw;
 		max-height: 100vh;
-  background: black; /* Use hex code for consistency */
-    transition: background var(--transition-duration) var(--transition-timing-function);
+		background: black; /* Use hex code for consistency */
+		transition: background var(--transition-duration) var(--transition-timing-function);
 	}
 </style>

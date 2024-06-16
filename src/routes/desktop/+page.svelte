@@ -1,7 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
 	import Desktop from './Desktop.svelte';
-	import MediaQuery from '$lib/components/MediaQuery.svelte';
 
 	let showDesktop = false;
 	let isVisible = false;
@@ -11,18 +10,14 @@
 			isVisible = true;
 			setTimeout(() => {
 				showDesktop = true;
-			}, 50); // Delay to ensure the transition effect is applied correctly
+			}, 50);
 		}, 100);
 	});
 </script>
 
-<MediaQuery query="(min-width: 1280px)" let:matches>
-	{#if matches}
-		<div class="mainContainer {isVisible ? 'fade-in show' : ''}">
-			<Desktop />
-		</div>
-	{/if}
-</MediaQuery>
+<div class="mainContainer {isVisible ? 'fade-in show' : ''}">
+	<Desktop />
+</div>
 
 <style>
 	.mainContainer {
