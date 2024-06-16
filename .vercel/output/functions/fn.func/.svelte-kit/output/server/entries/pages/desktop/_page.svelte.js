@@ -29,20 +29,13 @@ const Window = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   window.height;
   interact(".resizable");
   interact(".window-container");
-  if ($$props.window === void 0 && $$bindings.window && window !== void 0)
-    $$bindings.window(window);
-  if ($$props.onClose === void 0 && $$bindings.onClose && onClose !== void 0)
-    $$bindings.onClose(onClose);
-  if ($$props.defaultSize === void 0 && $$bindings.defaultSize && defaultSize !== void 0)
-    $$bindings.defaultSize(defaultSize);
-  if ($$props.defaultOffset === void 0 && $$bindings.defaultOffset && defaultOffset !== void 0)
-    $$bindings.defaultOffset(defaultOffset);
-  if ($$props.zIndex === void 0 && $$bindings.zIndex && zIndex !== void 0)
-    $$bindings.zIndex(zIndex);
-  if ($$props.onMinimize === void 0 && $$bindings.onMinimize && onMinimize !== void 0)
-    $$bindings.onMinimize(onMinimize);
-  if ($$props.onFocus === void 0 && $$bindings.onFocus && onFocus !== void 0)
-    $$bindings.onFocus(onFocus);
+  if ($$props.window === void 0 && $$bindings.window && window !== void 0) $$bindings.window(window);
+  if ($$props.onClose === void 0 && $$bindings.onClose && onClose !== void 0) $$bindings.onClose(onClose);
+  if ($$props.defaultSize === void 0 && $$bindings.defaultSize && defaultSize !== void 0) $$bindings.defaultSize(defaultSize);
+  if ($$props.defaultOffset === void 0 && $$bindings.defaultOffset && defaultOffset !== void 0) $$bindings.defaultOffset(defaultOffset);
+  if ($$props.zIndex === void 0 && $$bindings.zIndex && zIndex !== void 0) $$bindings.zIndex(zIndex);
+  if ($$props.onMinimize === void 0 && $$bindings.onMinimize && onMinimize !== void 0) $$bindings.onMinimize(onMinimize);
+  if ($$props.onFocus === void 0 && $$bindings.onFocus && onFocus !== void 0) $$bindings.onFocus(onFocus);
   $$result.css.add(css$c);
   return `  <div class="${[
     "window-container resizable draggable svelte-wroou5",
@@ -57,10 +50,8 @@ const WindowDropDown = create_ssr_component(($$result, $$props, $$bindings, slot
   let { items = [] } = $$props;
   let { onClick = () => {
   } } = $$props;
-  if ($$props.items === void 0 && $$bindings.items && items !== void 0)
-    $$bindings.items(items);
-  if ($$props.onClick === void 0 && $$bindings.onClick && onClick !== void 0)
-    $$bindings.onClick(onClick);
+  if ($$props.items === void 0 && $$bindings.items && items !== void 0) $$bindings.items(items);
+  if ($$props.onClick === void 0 && $$bindings.onClick && onClick !== void 0) $$bindings.onClick(onClick);
   $$result.css.add(css$b);
   return `<div class="drop-down__menu svelte-1vu75ih">${each(items, (item, index) => {
     return `${item.type === "item" ? `  <div class="${escape(null_to_empty(`drop-down__row${item.disable ? "--disable" : ""}`), true) + " svelte-1vu75ih"}"><div class="drop-down__check svelte-1vu75ih"></div> <div class="drop-down__text svelte-1vu75ih">${escape(item.text)} <span class="drop-down__hot-key svelte-1vu75ih">${escape(item.hotkey || "")}</span></div> <div class="drop-down__arrow--disable svelte-1vu75ih"></div> </div>` : `${item.type === "separator" ? `<div class="drop-down__separator svelte-1vu75ih"></div>` : ``}`}`;
@@ -88,12 +79,9 @@ const HeaderWindow = create_ssr_component(($$result, $$props, $$bindings, slots)
       onClickItem(name);
     }
   }
-  if ($$props.items === void 0 && $$bindings.items && items !== void 0)
-    $$bindings.items(items);
-  if ($$props.onClickItem === void 0 && $$bindings.onClickItem && onClickItem !== void 0)
-    $$bindings.onClickItem(onClickItem);
-  if ($$props.onClose === void 0 && $$bindings.onClose && onClose !== void 0)
-    $$bindings.onClose(onClose);
+  if ($$props.items === void 0 && $$bindings.items && items !== void 0) $$bindings.items(items);
+  if ($$props.onClickItem === void 0 && $$bindings.onClickItem && onClickItem !== void 0) $$bindings.onClickItem(onClickItem);
+  if ($$props.onClose === void 0 && $$bindings.onClose && onClose !== void 0) $$bindings.onClose(onClose);
   $$result.css.add(css$a);
   currentWindowId = get_store_value(appState).focusedAppId;
   return `<ul class="drop-down-list svelte-1suvwku" role="menu" aria-label="Window Options"${add_attribute("this", dropDown, 0)}>${each(Object.keys(items), (name) => {
@@ -400,10 +388,8 @@ const Bubble = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { size = "50px" } = $$props;
   const color = "rgba(155, 158, 217, 0.5)";
   let bubble;
-  if ($$props.size === void 0 && $$bindings.size && size !== void 0)
-    $$bindings.size(size);
-  if ($$props.color === void 0 && $$bindings.color && color !== void 0)
-    $$bindings.color(color);
+  if ($$props.size === void 0 && $$bindings.size && size !== void 0) $$bindings.size(size);
+  if ($$props.color === void 0 && $$bindings.color && color !== void 0) $$bindings.color(color);
   $$result.css.add(css$8);
   return `<div class="bubble svelte-srdjae" style="${"width: " + escape(size, true) + "; height: " + escape(size, true) + ";"}"${add_attribute("this", bubble, 0)}></div>`;
 });
@@ -777,8 +763,7 @@ const MyComputer = create_ssr_component(($$result, $$props, $$bindings, slots) =
         break;
     }
   }
-  if ($$props.onClose === void 0 && $$bindings.onClose && onClose !== void 0)
-    $$bindings.onClose(onClose);
+  if ($$props.onClose === void 0 && $$bindings.onClose && onClose !== void 0) $$bindings.onClose(onClose);
   $$result.css.add(css$4);
   return `<div class="main-container svelte-11ohjq8"><section class="toolBar svelte-11ohjq8"><div class="options svelte-11ohjq8">${validate_component(HeaderWindow, "HeaderWindow").$$render(
     $$result,
@@ -978,8 +963,7 @@ So go ahead, double-click those icons, and dive into a nostalgic adventure! Enjo
         break;
     }
   }
-  if ($$props.onClose === void 0 && $$bindings.onClose && onClose !== void 0)
-    $$bindings.onClose(onClose);
+  if ($$props.onClose === void 0 && $$bindings.onClose && onClose !== void 0) $$bindings.onClose(onClose);
   $$result.css.add(css$3);
   return `<div class="svelte-1vhf4um"><header class="svelte-1vhf4um">${validate_component(HeaderWindow, "HeaderWindow").$$render(
     $$result,
@@ -1265,8 +1249,7 @@ const Recycle = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         break;
     }
   }
-  if ($$props.onClose === void 0 && $$bindings.onClose && onClose !== void 0)
-    $$bindings.onClose(onClose);
+  if ($$props.onClose === void 0 && $$bindings.onClose && onClose !== void 0) $$bindings.onClose(onClose);
   $$result.css.add(css$1);
   return `<div class="main-container svelte-1kzhybb"><section class="toolBar svelte-1kzhybb"><div class="options svelte-1kzhybb">${validate_component(HeaderWindow, "HeaderWindow").$$render(
     $$result,
@@ -1471,8 +1454,7 @@ function reducer(state, action) {
   switch (action.type) {
     case "ADD_APP": {
       const appConfig = initialAppState[action.appKey];
-      if (!appConfig)
-        return state;
+      if (!appConfig) return state;
       const newApp = {
         ...appConfig,
         id: state.nextAppID,
