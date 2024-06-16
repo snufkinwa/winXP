@@ -116,12 +116,12 @@
 	@import url('https://fonts.googleapis.com/css2?family=Cute+Font&display=swap');
 
 	@font-face {
-		font-family: FastSS;
+		font-family: 'Planet Kosmos';
 		src: url('$lib/assets/fonts/PLANK.ttf') format('truetype');
 	}
 
 	@font-face {
-		font-family: Font3D;
+		font-family: 'FontoVision IV';
 		src: url('$lib/assets/fonts/Fontout.ttf') format('truetype');
 	}
 
@@ -166,7 +166,7 @@
 		width: 400px;
 	}
 	h1 {
-		font-family: FastSS;
+		font-family: 'Planet Kosmos', sans-serif;
 		font-size: 3em;
 		color: #fff;
 		z-index: 3;
@@ -178,7 +178,7 @@
 	}
 
 	h4 {
-		font-family: Font3D;
+		font-family: 'Fontovision IV', sans-serif;
 		font-size: 3em;
 		color: #fff;
 		z-index: 3;
