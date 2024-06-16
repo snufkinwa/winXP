@@ -7,7 +7,7 @@
 		line-height: 1.5;
 		font-weight: 400;
 
-		color-scheme: light;
+		color-scheme: none;
 		color: rgba(255, 255, 255, 0.87);
 		background-color: none transparent;
 
@@ -15,7 +15,15 @@
 		text-rendering: optimizeLegibility;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
-	}
+
+		--transition-duration: 0.3s;
+    --transition-timing-function: ease-in-out;
+}
+
+	* {
+    transition: all var(--transition-duration) var(--transition-timing-function);
+}
+
 
 	body {
 		overflow: hidden;
@@ -23,5 +31,7 @@
 		place-items: center;
 		max-width: 100vw;
 		max-height: 100vh;
+  background: black; /* Use hex code for consistency */
+    transition: background var(--transition-duration) var(--transition-timing-function);
 	}
 </style>
