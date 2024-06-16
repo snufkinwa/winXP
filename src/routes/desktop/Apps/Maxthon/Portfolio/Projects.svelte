@@ -117,7 +117,7 @@
 
 	@font-face {
 		font-family: FastSS;
-		src: url('$lib/assets/fonts/PLANK___.ttf') format('truetype');
+		src: url('$lib/assets/fonts/PLANK.ttf') format('truetype');
 	}
 
 	@font-face {
