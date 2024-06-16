@@ -15,8 +15,10 @@
 	});
 </script>
 
-<div class="mainContainer {isVisible ? 'fade-in show' : ''}">
-	<Desktop />
+<div class={`mainContainer ${isVisible ? 'fade-in show' : ''}`}>
+	{#if showDesktop}
+		<Desktop />
+	{/if}
 </div>
 
 <style>
@@ -31,11 +33,11 @@
 		background-size: cover;
 		background-position: center;
 		opacity: 0;
+		transition: opacity 1s ease-in;
 	}
 
 	.fade-in {
 		opacity: 0;
-		transition: opacity 1s ease-in;
 	}
 
 	.show {

@@ -28,7 +28,7 @@
 		{#if isLoading}
 			<div class="windows__bg" class:fade-out={!isLoading}></div>
 		{:else}
-			<div class="content" class:fade-in={isLoading}>
+			<div class="content" class:fade-in={!isLoading}>
 				<slot />
 			</div>
 		{/if}
