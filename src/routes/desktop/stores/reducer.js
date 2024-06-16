@@ -194,7 +194,7 @@ const initialAppState = {
 const initialNotepadApp = {
 	...initialAppState.Notepad,
 	id: genId(),
-	zIndex: genIndex()
+	zIndex: 1
 };
 
 export const initialState = {

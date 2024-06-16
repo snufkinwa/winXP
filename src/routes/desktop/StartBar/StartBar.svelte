@@ -37,10 +37,6 @@
 		focusApp(id);
 	}
 
-	function handleAppClose(id) {
-		removeApp(id);
-	}
-
 	onMount(() => {
 		return () => {
 			document.removeEventListener('click', handleClickOutside, true);
@@ -157,6 +153,8 @@
 		background: linear-gradient(to bottom, #67ae55, #578843);
 		display: flex;
 		align-items: center;
+		position: absolute;
+		left: 0;
 	}
 
 	.taskbar__start::before {
@@ -236,6 +234,8 @@
 		padding: 0 0px;
 		margin-left: 0px;
 		z-index: 1;
+		position: absolute;
+		right: 0;
 	}
 
 	#time-options {
@@ -266,8 +266,11 @@
 		display: flex;
 		flex-direction: row;
 		align-items: center;
+		position: absolute;
+		left: 100px;
 		margin-left: 10px;
-		overflow-x: auto;
+		overflow: hidden;
+		width: calc(90% - 20px);
 	}
 
 	.taskbar__app {
@@ -275,18 +278,23 @@
 		align-items: center;
 		border-radius: 3px;
 		padding: 4px 56px 4px 0px;
-		min-width: 175px;
+		min-width: 20px;
 		border: 1px solid #003c74;
 		background: #3576f3;
 		color: white;
 		font-size: 14px;
 		cursor: pointer;
 		outline: none;
+		flex-shrink: 1;
+		flex-basis: 175px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 
 	.taskbar__app.active {
 		background: #2d5daf;
-		box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3);
+		box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.3);
 		border-left: 2px solid #0b2042;
 		border-top: 2px solid #0b2042;
 		border-right: #003c74 1px solid;
