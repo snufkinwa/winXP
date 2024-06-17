@@ -12,7 +12,7 @@
 	import Balloon from '$lib/components/Balloon/Balloon.svelte';
 
 	let password = '';
-	let correctPassword = import.meta.env.VITE_WIN_PASSWORD;
+	let correctPassword = process.env.WIN_PASSWORD;
 	let activeUser = null;
 	const dispatch = createEventDispatcher();
 	let startBalloon = false;
