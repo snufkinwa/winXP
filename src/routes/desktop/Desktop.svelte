@@ -63,6 +63,11 @@
 				// don't set a cursor for drag actions
 				return null;
 			},
+			modifiers: [
+				interact.modifiers.restrictRect({
+					restriction: 'parent'
+				})
+			],
 			listeners: {
 				move(event) {
 					const target = event.target;
@@ -77,49 +82,47 @@
 			}
 		});
 	});
-
 </script>
 
-		<div id="desktop">
-			{#each $appState.apps as app (app.id)}
-				{#if !app.minimized}
-					<Window
-						window={app}
-						onClose={() => closeWindow(app.id)}
-						onMinimize={() => minimizeWindow(app.id)}
-						onFocus={() => handleFocus(app.id)}
-						defaultSize={app.defaultSize}
-						defaultOffset={app.defaultOffset}
-						zIndex={app.zIndex}
-					/>
-				{/if}
-			{/each}
-			<div class="icons">
-				{#each $iconState as icon (icon.id)}
-					<div
-						class="icon icon-draggable"
-						class:active={icon.active}
-						on:dblclick={() => handleIconClick(icon)}
-						role="button"
-						tabindex="0"
-						on:keydown={(event) => {
-							if (event.key === 'Enter' || event.key === ' ') {
-								event.preventDefault();
-								handleIconClick(icon);
-							}
-						}}
-					>
-						<img src={icon.icon} alt={icon.title} />
-						<p>{@html formatTitle(icon.title)}</p>
-					</div>
-				{/each}
+<div id="desktop">
+	{#each $appState.apps as app (app.id)}
+		{#if !app.minimized}
+			<Window
+				window={app}
+				onClose={() => closeWindow(app.id)}
+				onMinimize={() => minimizeWindow(app.id)}
+				onFocus={() => handleFocus(app.id)}
+				defaultSize={app.defaultSize}
+				defaultOffset={app.defaultOffset}
+				zIndex={app.zIndex}
+			/>
+		{/if}
+	{/each}
+	<div class="icons">
+		{#each $iconState as icon (icon.id)}
+			<div
+				class="icon icon-draggable"
+				class:active={icon.active}
+				on:dblclick={() => handleIconClick(icon)}
+				role="button"
+				tabindex="0"
+				on:keydown={(event) => {
+					if (event.key === 'Enter' || event.key === ' ') {
+						event.preventDefault();
+						handleIconClick(icon);
+					}
+				}}
+			>
+				<img src={icon.icon} alt={icon.title} />
+				<p>{@html formatTitle(icon.title)}</p>
 			</div>
+		{/each}
+	</div>
 
-			<div class="start-bar-container">
-				<StartBar />
-			</div>
-		</div>
-
+	<div class="start-bar-container">
+		<StartBar />
+	</div>
+</div>
 
 <style>
 	#desktop {
@@ -127,6 +130,11 @@
 		height: calc(100% - 36px);
 		overflow-y: hidden;
 		background-color: none;
+	}
+
+	.icons {
+		width: 100%;
+		height: calc(100% - 36px);
 	}
 
 	.icon-draggable {

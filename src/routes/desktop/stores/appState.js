@@ -105,6 +105,6 @@ export function toggleMaximizeApp(id) {
 	appState.dispatch({ type: 'TOGGLE_MAXIMIZE_APP', id });
 }
 
-export function updateAppState(id, width, height) {
-	appState.dispatch({ type: 'UPDATE_APP_STATE', id, width, height });
+export function updateAppState(id, width, height, x, y) {
+	appState.dispatch({ type: 'UPDATE_APP_STATE', id, width, height, x, y });
 }

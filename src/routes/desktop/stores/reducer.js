@@ -319,18 +319,16 @@ export function reducer(state, action) {
 				if (app.id === action.id) {
 					return {
 						...app,
-						defaultSize: { width: action.width, height: action.height }
+						defaultSize: { width: action.width, height: action.height },
+						position: { x: action.x, y: action.y }
 					};
 				}
 				return app;
 			});
-
 			return {
 				...state,
 				apps: updatedApps
 			};
 		}
-		default:
-			return state;
 	}
 }

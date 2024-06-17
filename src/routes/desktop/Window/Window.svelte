@@ -20,7 +20,6 @@
 	export let defaultOffset;
 	export let zIndex;
 	export let onMinimize;
-	let onMaximize;
 	export let onFocus;
 
 	let localX = window.x;
@@ -32,7 +31,6 @@
 
 	const resizableContainer = interact('.resizable');
 	const draggable = interact('.window-container');
-
 	onMount(() => {
 		draggable.draggable({
 			allowFrom: '.header',
@@ -42,47 +40,53 @@
 				})
 			],
 			listeners: {
-				start(event) {
-					console.log(event.type, event.target);
-				},
 				move(event) {
 					position.x += event.dx;
 					position.y += event.dy;
-					event.target.style.transform = `translate(${position.x}px, ${position.y}px)`;
+
+					Object.assign(event.target.style, {
+						transform: `translate(${position.x}px, ${position.y}px)`
+					});
+
+					Object.assign(event.target.dataset, { x: position.x, y: position.y });
+				},
+				end(event) {
+					// Update the window position in the appState
+					updateAppState(window.id, localWidth, localHeight, position.x, position.y);
 				}
 			}
 		});
-
 		if (window.resizable) {
 			resizableContainer.resizable({
+				edges: { top: '.resizer-top', left: true, bottom: true, right: true },
 				modifiers: [
 					interact.modifiers.restrictSize({
 						min: { width: window.minSize.width, height: window.minSize.height },
 						max: { width: window.maxSize.width, height: window.maxSize.height }
 					})
 				],
-				edges: { top: '.resizer-top', left: true, bottom: true, right: true },
 				listeners: {
 					move(event) {
-						localX = (parseFloat(event.target.getAttribute('data-x')) || 0) + event.deltaRect.left;
-						localY = (parseFloat(event.target.getAttribute('data-y')) || 0) + event.deltaRect.top;
-						localWidth = event.rect.width;
-						localHeight = event.rect.height;
+						let { x, y } = event.target.dataset;
+
+						x = (parseFloat(x) || 0) + event.deltaRect.left;
+						y = (parseFloat(y) || 0) + event.deltaRect.top;
+
 						Object.assign(event.target.style, {
-							width: `${localWidth}px`,
-							height: `${localHeight}px`,
-							transform: `translate(${localX}px, ${localY}px)`
+							width: `${event.rect.width}px`,
+							height: `${event.rect.height}px`,
+							transform: `translate(${x}px, ${y}px)`
 						});
-						event.target.setAttribute('data-x', localX);
-						event.target.setAttribute('data-y', localY);
+
+						Object.assign(event.target.dataset, { x, y });
 					},
 					end(event) {
-						// Update the window size in the initialState object
-						window.width = localWidth;
-						window.height = localHeight;
+						localWidth = event.rect.width;
+						localHeight = event.rect.height;
+						let { x, y } = event.target.dataset;
 
-						// Update the window size in the appState
-						updateAppState(window.id, localWidth, localHeight);
+						// Update the window size and position in the appState
+						updateAppState(window.id, localWidth, localHeight, parseFloat(x), parseFloat(y));
 					}
 				}
 			});
