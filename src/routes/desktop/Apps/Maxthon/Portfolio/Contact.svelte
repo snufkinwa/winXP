@@ -68,14 +68,15 @@
 
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
 	.wrapper {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		color: #000;
-		font-weight: 400;
-		font-family: 'Comic Neue MS', cursive, sans-serif;
+		font-weight: 600;
+		font-family: 'Comic Neue', cursive, sans-serif;
 		background: url('$lib/assets/MaxthonImages/vine2bg.png') repeat;
 	}
 
