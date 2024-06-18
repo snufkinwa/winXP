@@ -185,6 +185,8 @@
 		font-family: 'Source Sans Pro';
 		src: url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 		font-display: swap;
+		font-weight: normal;
+		font-style: normal;
 	}
 	* {
 		margin: 0;

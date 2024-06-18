@@ -118,11 +118,15 @@
 	@font-face {
 		font-family: 'Planet Kosmos';
 		src: url('$lib/assets/fonts/PLANK.ttf') format('truetype');
+		font-weight: normal;
+		font-style: normal;
 	}
 
 	@font-face {
 		font-family: 'FontoVision IV';
 		src: url('$lib/assets/fonts/Fontout.ttf') format('truetype');
+		font-weight: normal;
+		font-style: normal;
 	}
 
 	.wrapper {
