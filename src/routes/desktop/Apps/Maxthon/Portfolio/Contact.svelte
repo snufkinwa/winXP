@@ -9,6 +9,11 @@
 	import emailjs from '@emailjs/browser';
 
 	const sendEmail = (e) => {
+		e.preventDefault();
+		console.log('Service ID:', process.env.SERVICE_ID);
+		console.log('Template ID:', process.env.TEMPLATE_ID);
+		console.log('Public Key:', process.env.PUBLIC_KEY);
+
 		emailjs
 			.sendForm(process.env.SERVICE_ID, process.env.TEMPLATE_ID, e.target, {
 				publicKey: process.env.PUBLIC_KEY
