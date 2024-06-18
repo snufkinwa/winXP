@@ -279,10 +279,10 @@
 		display: flex;
 		align-items: center;
 		border-radius: 3px;
-		padding: 4px 56px 4px 0px;
+		padding: 5px 56px 5px 0px;
 		min-width: 20px;
-		border: 1px solid #003c74;
-		background: #3576f3;
+		border: 1px solid #0174e0;
+		background: linear-gradient(to bottom, #4f81fe, #3576f3, #4f81fe);
 		color: white;
 		font-size: 14px;
 		cursor: pointer;
@@ -292,6 +292,10 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
+		box-shadow:
+			inset 1px 1px 0px #a4bdec,
+			inset -1px -1px 0px #2758cc,
+			inset -2px -2px 0px #0064c1;
 	}
 
 	.taskbar__app.active {
