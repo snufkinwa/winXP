@@ -13,7 +13,7 @@ Credits:\n
  and Jeff Schafer from The Skins Factory\n
 ☆.𓋼𓍊 𓆏 𓍊𓋼𓍊.☆
 \n
-Double-click the draggable icons on the desktop to organize it to your liking. Open the apps and explore.\n
+Reorganize the draggable icons on the desktop, then double-click to open the apps and explore.\n
 This project is my way of taking a delightful trip down memory lane, back to the early 2000s—a time of AOL Instant Messenger, MySpace, and the early days of online creativity. It was an exciting era of innovation and discovery.\n
 \n
 You'll find the classic sections—About, Projects, and Contact—inside the Maxthon Browser on the desktop. Think of it as blending nostalgic charm with modern tech, all wrapped up in the iconic XP style.\n
