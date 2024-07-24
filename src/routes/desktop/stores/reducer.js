@@ -276,11 +276,20 @@ export function reducer(state, action) {
 		}
 		case 'RESTORE_APP': {
 			return {
-				...state,
-				apps: state.apps.map((app) => (app.id === action.id ? { ...app, minimized: false } : app)),
-				focusedAppId: action.id
+			  ...state,
+			  apps: state.apps.map((app) => 
+				app.id === action.id 
+				  ? { 
+					  ...app, 
+					  minimized: false,
+					  width: app.defaultSize.width,
+					  height: app.defaultSize.height
+					} 
+				  : app
+			  ),
+			  focusedAppId: action.id
 			};
-		}
+		  }
 		case 'FOCUS_APP': {
 			const updatedApps = state.apps.map((app) => {
 				if (app.id === action.id) {
