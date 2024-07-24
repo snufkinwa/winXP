@@ -129,11 +129,13 @@
 	class:minimized={window.minimized}
 	class:maximized={window.maximized}
 	class:invisible={window.header.invisible}
-	style="width: {window.maximized ? 0 : defaultSize.width + 'px'}; height: {window.maximized
-		? 0
-		: defaultSize.height + 'px'}; z-index: {zIndex}; top: {window.maximized
-		? '0'
-		: defaultOffset.y + 'px'}; left: {window.maximized ? '0' : defaultOffset.x + 'px'};"
+style="
+  width: {window.maximized ? 0 : (window.width || defaultSize.width) + 'px'};
+  height: {window.maximized ? 0 : (window.height || defaultSize.height) + 'px'};
+  z-index: {zIndex};
+  top: {window.maximized ? '0' : defaultOffset.y + 'px'};
+  left: {window.maximized ? '0' : (window.x || defaultOffset.x) + 'px'};
+"
 	on:mousedown={handleFocus}
 	tabindex="0"
 	role="dialog"
