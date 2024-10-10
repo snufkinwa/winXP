@@ -103,7 +103,7 @@
 			>
 				<div class="iconA"></div>
 				<div class="user">
-					<h3>Janay King</h3>
+					<h3>Janay Harris</h3>
 					{#if activeUser === 'janay'}
 						<p>Type your password</p>
 						<!-- svelte-ignore a11y-click-events-have-key-events -->

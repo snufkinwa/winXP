@@ -114,7 +114,7 @@
 	</nav>
 	<section class="profile-body">
 		<div class="col user-info">
-			<h2 class="name">Janay King</h2>
+			<h2 class="name">Janay Harris</h2>
 			<div class="identity">
 				<div class="avatar">
 					<img
@@ -145,7 +145,7 @@
 				</div>
 			</div>
 			<div class="small-panel contact-panel">
-				<div class="panel-header">Contacting Janay King</div>
+				<div class="panel-header">Contacting Janay Harris</div>
 				<div class="buttons-container">
 					<div class="row">
 						<!-- svelte-ignore a11y-missing-attribute -->
@@ -182,7 +182,7 @@
 				</div>
 			</div>
 			<div class="small-panel m-details-panel">
-				<div class="panel-header">Janay King's Interests</div>
+				<div class="panel-header">Janay Harris's Interests</div>
 				<div class="row">
 					<div class="sm-col">
 						<p>General:</p>
@@ -229,7 +229,7 @@
 			</div>
 
 			<div class="small-panel m-details-panel">
-				<div class="panel-header">Janay King's Details</div>
+				<div class="panel-header">Janay Harris's Details</div>
 				<div class="row">
 					<div class="sm-col">
 						<p>Status:</p>
@@ -291,11 +291,11 @@
 
 		<div class="col user-content">
 			<div class="top-banner">
-				<h1>Janay King is in your extended network</h1>
+				<h1>Janay Harris is in your extended network</h1>
 			</div>
 			<div class="profile-section" id="blog-container"></div>
 			<div class="profile-section" id="blurbs-container">
-				<div class="section-header">Janay King's blurbs</div>
+				<div class="section-header">Janay Harris's blurbs</div>
 				<div class="section-subheader">About me:</div>
 				<p>
 					Bet you didn’t know... <br /> <br /> The original MySpace was heavily built using HTML tables,
@@ -306,8 +306,8 @@
 				<p>Fellow web devs, coders, and meme masters.</p>
 			</div>
 			<div class="profile-section" id="skill-container">
-				<div class="section-header">Janay King's skill space</div>
-				<div class="skill-count">Janay King has <b>{skills.length}</b> skills.</div>
+				<div class="section-header">Janay Harris's skill space</div>
+				<div class="skill-count">Janay Harris has <b>{skills.length}</b> skills.</div>
 				<div class="skill-grid">
 					<div class="row">
 						{#each skills.slice(0, 4) as skill}
@@ -338,7 +338,7 @@
 				</div>
 				{#if skills.length > 9}
 					<button on:click={() => (showAllSkills = !showAllSkills)} class="view-all-f">
-						{showAllSkills ? 'Show Less' : "View All of Janay King's skills"}
+						{showAllSkills ? 'Show Less' : "View All of Janay Harris's skills"}
 					</button>
 				{/if}
 			</div>

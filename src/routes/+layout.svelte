@@ -1,4 +1,4 @@
-<title>Janay King || Portfolio</title>
+<title>Janay Harris || Portfolio</title>
 
 <body>
 	<slot />

@@ -59,7 +59,7 @@
 		</div>
 		<div class="footer">
 			<div>
-				<p>© 2022 Janay King. All rights reserved.</p>
+				<p>© 2024 Janay Harris. All rights reserved.</p>
 				<img src={geocitiesLogo} alt="Geocities" />
 			</div>
 		</div>
