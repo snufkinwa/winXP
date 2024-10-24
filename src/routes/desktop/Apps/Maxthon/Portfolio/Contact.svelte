@@ -34,9 +34,6 @@
 				<a href="https://github.com/snufkinwa"
 					><img class="socials" src={githubLogo} alt="Vine" />
 				</a>
-				<a href="https://www.linkedin.com/in/jlpngcodes/"
-					><img class="socials" src={linkedinLogo} alt="Vine" />
-				</a>
 			</div>
 			<img src={vineEmail} alt="Vine Email" />
 		</div>
