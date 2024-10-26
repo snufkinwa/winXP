@@ -204,7 +204,7 @@
 						<p>Movies:</p>
 					</div>
 					<div class="sm-col">
-						<p>Fantasy films, Legend(1985) and scifi flicks</p>
+						<p>Fantasy films, Legend(1985) and scifi flicks - DUNE and Interstellar</p>
 					</div>
 				</div>
 				<div class="row">
@@ -212,7 +212,7 @@
 						<p>Television:</p>
 					</div>
 					<div class="sm-col">
-						<p>Delicious in Dungeon, Bridgerton</p>
+						<p>Sailor Moon, Berserk </p>
 					</div>
 				</div>
 				<div class="row">
@@ -221,7 +221,7 @@
 					</div>
 					<div class="sm-col">
 						<p>
-							To become a leading expert in AI and Blockchain, contribute to open-source projects,
+							To become an expert in AI and Blockchain, contribute to open-source projects,
 							and develop innovative tech solutions.
 						</p>
 					</div>
@@ -235,7 +235,7 @@
 						<p>Status:</p>
 					</div>
 					<div class="sm-col">
-						<p>Student</p>
+						<p>Unemployed</p>
 					</div>
 				</div>
 				<div class="row">
@@ -243,7 +243,7 @@
 						<p>Here for:</p>
 					</div>
 					<div class="sm-col">
-						<p>skills, Collaborators, Work opportunities</p>
+						<p>Skills, Collaborators, Work opportunities</p>
 					</div>
 				</div>
 				<div class="row">
@@ -267,7 +267,7 @@
 						<p>Certifications:</p>
 					</div>
 					<div class="sm-col">
-						<p>Python Essentials I, Python Essentials II</p>
+						<p>Python Essentials I, Python Essentials II, Linux Essentials 010, AI Programming with Python</p>
 					</div>
 				</div>
 				<div class="row">
@@ -283,7 +283,7 @@
 						<p>Occupation:</p>
 					</div>
 					<div class="sm-col">
-						<p>Computer Science Student</p>
+						<p>Self-taught Student</p>
 					</div>
 				</div>
 			</div>
