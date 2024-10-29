@@ -188,7 +188,7 @@
 						<p>General:</p>
 					</div>
 					<div class="sm-col">
-						<p>Internet, Blockchain, Machine Learning, Quantum Computing</p>
+						<p>Internet, Machine Learning, Data Engineering, Quantum Computing</p>
 					</div>
 				</div>
 				<div class="row">
@@ -212,7 +212,7 @@
 						<p>Television:</p>
 					</div>
 					<div class="sm-col">
-						<p>Sailor Moon, Berserk </p>
+						<p>Moomin, Buffy the Vampire Slayer, Sailor Moon(1992-1997), Puella Magi Madoka Magica(2011), Berserk(1997)</p>
 					</div>
 				</div>
 				<div class="row">
@@ -221,7 +221,7 @@
 					</div>
 					<div class="sm-col">
 						<p>
-							To become an expert in AI and Blockchain, contribute to open-source projects,
+							To become an expert in AI and Machine Learning, contribute to open-source projects,
 							and develop innovative tech solutions.
 						</p>
 					</div>
