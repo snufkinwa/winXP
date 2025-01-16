@@ -1,5 +1,5 @@
 <p align="center">
-<img src='https://svgshare.com/i/17Hb.svg' title='' style="width:250px;" />
+<img src='https://github.com/user-attachments/assets/63b6ebd8-499e-4f4d-b3ca-ae50bb8ed4e9' title='' style="width:250px;" />
 </p>
 
 # Windows XP Portfolio
@@ -12,6 +12,7 @@ Welcome to my Windows XP-themed portfolio! This project is a nostalgic journey b
 - **Applications:** Double-click the icons on the desktop to open various apps.
 - **Maxthon Browser:** Contains sections for About, Projects, and Contact.
 - **Notepad:** Displays a welcome message and project credits.
+
 
 ## Credits
 
