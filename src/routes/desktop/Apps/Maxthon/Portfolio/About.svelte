@@ -353,10 +353,10 @@
 				<div class="comment-stream">
 					<div class="comment user03324">
 						<div class="dp-group">
-							<a href="#/" class="prof-name">Elon M&sup2; </a>
+							<a href="#/" class="prof-name">(L &#43; i)&int;us &times; T(0, r)valds;</a>
 							<!-- svelte-ignore a11y-img-redundant-alt -->
 							<img
-								src="https://pics.craiyon.com/2023-06-28/e97ccd283e0740fab888df91e834520e.webp"
+								src="https://imgur.com/s0py6zB.png"
 								alt="profile photo"
 							/>
 							<p></p>
