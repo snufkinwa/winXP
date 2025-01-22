@@ -6,13 +6,15 @@ import maxthonIcon from '$lib/assets/windowsIcons/Maxthon.png';
 import paintIcon from '$lib/assets/windowsIcons/Paint.png';
 import myCompIcon from '$lib/assets/windowsIcons/My Computer.png';
 import wmPlayerIcon from '$lib/assets/windowsIcons/Windows Media Player 9.png';
+import bovIcon from '$lib/assets/windowsIcons/bladeofvalor.png';
 
 import Maxthon from '../Apps/Maxthon/Maxthon.svelte';
 import MyComputer from '../Apps/MyComputer/MyComputer.svelte';
 import Notepad from '../Apps/Notepad/Notepad.svelte';
 import Paint from '../Apps/Paint/Paint.svelte';
-import WMPlayer from '../Apps/Window Media Player/WMPlayer.svelte';
+import WMPlayer from '../Apps/WindowMediaPlayer/WMPlayer.svelte';
 import RecycleBin from '../Apps/Recycle/Recycle.svelte';
+import BladeofValor from '../Apps/BladeOfValor/BladeOfValor.svelte';
 
 function createAppState() {
 	const { subscribe, update } = writable(initialState);
@@ -66,6 +68,13 @@ export const iconState = writable([
 		icon: paintIcon,
 		title: 'Paint',
 		component: Paint,
+		isFocus: false
+	},
+	{
+		id: 6,
+		icon: bovIcon,
+		title: 'Blade of Valor',
+		component: BladeofValor,
 		isFocus: false
 	}
 ]);

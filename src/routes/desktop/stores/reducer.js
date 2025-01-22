@@ -4,14 +4,16 @@ import maxthonIcon from '$lib/assets/windowsIcons/Maxthon.png';
 import paintIcon from '$lib/assets/windowsIcons/Paint.png';
 import myCompIcon from '$lib/assets/windowsIcons/My Computer.png';
 import wmPlayerIcon from '$lib/assets/windowsIcons/Windows Media Player 9.png';
+import bovIcon from '$lib/assets/windowsIcons/bladeofvalor.png';
 
 import window from '../Window/Window.svelte';
 import Maxthon from '../Apps/Maxthon/Maxthon.svelte';
 import MyComputer from '../Apps/MyComputer/MyComputer.svelte';
 import Notepad from '../Apps/Notepad/Notepad.svelte';
 import Paint from '../Apps/Paint/Paint.svelte';
-import WMPlayer from '../Apps/Window Media Player/WMPlayer.svelte';
+import WMPlayer from '../Apps/WindowMediaPlayer/WMPlayer.svelte';
 import RecycleBin from '../Apps/Recycle/Recycle.svelte';
+import BladeofValor from '../Apps/BladeOfValor/BladeOfValor.svelte';
 const gen = () => {
 	let id = -1;
 	return () => {
@@ -90,7 +92,7 @@ const initialAppState = {
 		},
 		defaultSize: {
 			width: 660,
-			height: 500
+			height: 490
 		},
 		minSize: {
 			width: 460,
@@ -188,6 +190,35 @@ const initialAppState = {
 		maximized: false,
 		id: genId(),
 		zIndex: genIndex()
+	},
+	'Blade of Valor': {
+		component: BladeofValor,
+		header: {
+			title: 'Blade Of Valor',
+			icon: bovIcon,
+			invisible: false
+		},
+		defaultSize: {
+			width: 1200,
+			height: 850
+		},
+		minSize: {
+			width: 1000,
+			height: 400
+		},
+		maxSize: {
+			width: 1200,
+			height: 670
+		},
+		defaultOffset: {
+			x: 450,
+			y: 100
+		},
+		resizable: true,
+		minimized: false,
+		maximized: false,
+		id: genId(),
+		zIndex: genIndex()
 	}
 };
 
@@ -276,20 +307,20 @@ export function reducer(state, action) {
 		}
 		case 'RESTORE_APP': {
 			return {
-			  ...state,
-			  apps: state.apps.map((app) => 
-				app.id === action.id 
-				  ? { 
-					  ...app, 
-					  minimized: false,
-					  width: app.defaultSize.width,
-					  height: app.defaultSize.height
-					} 
-				  : app
-			  ),
-			  focusedAppId: action.id
+				...state,
+				apps: state.apps.map((app) =>
+					app.id === action.id
+						? {
+								...app,
+								minimized: false,
+								width: app.defaultSize.width,
+								height: app.defaultSize.height
+							}
+						: app
+				),
+				focusedAppId: action.id
 			};
-		  }
+		}
 		case 'FOCUS_APP': {
 			const updatedApps = state.apps.map((app) => {
 				if (app.id === action.id) {

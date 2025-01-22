@@ -1,4 +1,5 @@
 <script>
+	import { onMount, onDestroy } from 'svelte';
 	import Y2Kaesthetic from '$lib/assets/MaxthonImages/6.png';
 	import Bubble from './components/Bubble.svelte';
 	import glassBuble from '$lib/assets/MaxthonImages/1.png';
@@ -6,6 +7,38 @@
 	import starLink from '$lib/assets/MaxthonImages/star.gif';
 
 	const bubbles = Array.from({ length: 20 });
+	let currentSlide = 0;
+	let slides_length = 4;
+	const slides = [
+		{ title: 'Blade of Valor (Game)', description: 'Phaser 3, Nextjs, Python' },
+		{ title: 'Travel Site', description: 'Java and MySQL on the back end. Angular front-end.' },
+		{
+			title: 'Booking Platform',
+			description: 'Django and SQLite backend. The front end is Svelte.'
+		},
+		{
+			title: 'Windows XP Portfolio',
+			description: 'Sveltekit, other small projects called in for a more realistic experience.'
+		}
+	];
+
+	function nextSlide() {
+		currentSlide = (currentSlide + 1) % slides_length;
+	}
+
+	function prevSlide() {
+		currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+	}
+
+	// Automatically advance slides every 5 seconds (optional)
+	let interval;
+	onMount(() => {
+		interval = setInterval(nextSlide, 5000);
+	});
+
+	onDestroy(() => {
+		if (interval) clearInterval(interval);
+	});
 </script>
 
 <div class="wrapper">
@@ -62,47 +95,15 @@
 			<div><img src={Y2Kaesthetic} alt="y2k aesthetic" /></div>
 		</div>
 		<div class="blog-container">
-			<div class="glass-overlay">
-				<div class="loader">
-					<span>𓆩.⚝.𓆪</span>
-					<div><h4>loading</h4></div>
-					<span class="blink">✧</span>
-					<span class="blink">✧</span>
-					<span class="blink">✧</span>
-				</div>
-			</div>
 			<div class="blog">
-				<div class="menu">
-					<a href="/"><img src={starLink} alt="star link" /></a>
-					<a href="/about"><img src={starLink} alt="star link" /></a>
-					<a href="/contact"><img src={starLink} alt="star link" /></a>
-				</div>
-				<div class="clearfix">
-					<div class="sidebar">
-						<h2>Categories</h2>
-						<ul class="categories">
-							<li>Web Design</li>
-							<li>Graphic Design</li>
-							<li>Development</li>
-						</ul>
-					</div>
-					<div class="content">
-						<div class="project-item">
-							<h2>Travel Site</h2>
-							<p>Java and MySQL on the back end. Angular front-end.</p>
-						</div>
-						<div class="project-item">
-							<h2>Booking Platform</h2>
-							<p>Django and SQLlite backend. The front end is Svelte.</p>
-						</div>
-						<div class="project-item">
-							<h2>Hexwood Hunt (Game)</h2>
-							<p>No framerworks, just JavaScript, HTML and CSS.</p>
-						</div>
-						<div class="project-item">
-							<h2>Windows XP Portfolio</h2>
-							<p>Sveltekit, other small projects called in for a more realistic experience.</p>
-						</div>
+				<div class="carousel-container">
+					<div class="carousel">
+						{#each slides as slide, i}
+							<div class="slide" style="transform: translateX({100 * (i - currentSlide)}%)">
+								<h2>{slide.title}</h2>
+								<p>{slide.description}</p>
+							</div>
+						{/each}
 					</div>
 				</div>
 			</div>
@@ -181,46 +182,6 @@
 		-webkit-text-fill-color: transparent;
 	}
 
-	h4 {
-		font-family: 'Fontovision IV', sans-serif;
-		font-size: 3em;
-		color: #fff;
-		z-index: 3;
-		background-image: url($lib/assets/MaxthonImages/stainless-steel-texture-388.png);
-		background-repeat: repeat;
-		-webkit-background-clip: text;
-		background-clip: text;
-		-webkit-text-fill-color: transparent;
-		text-align: center;
-		animation-name: spin, depth;
-		animation-timing-function: linear;
-		animation-iteration-count: infinite;
-		animation-duration: 3s;
-		transform-style: preserve-3d;
-		position: relative;
-		display: inline-block;
-	}
-
-	h4::before,
-	h4::after {
-		content: '';
-		display: block;
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		transform: rotateY(0.5deg);
-		transform-origin: 0 50%;
-		-webkit-background-clip: text;
-		background-clip: text;
-		-webkit-text-fill-color: transparent;
-	}
-
-	h4::after {
-		transform: rotateY(-0.5deg);
-		transform-origin: 100% 50%;
-	}
-
 	@keyframes spin {
 		from {
 			transform: rotateY(0deg);
@@ -279,13 +240,6 @@
 		width: 100%;
 	}
 
-	.menu {
-		display: flex;
-		justify-content: space-around;
-		padding: 10px;
-		margin-bottom: 20px;
-	}
-
 	.glassbuble {
 		position: absolute;
 		top: 5%;
@@ -301,43 +255,36 @@
 		z-index: 10;
 	}
 
-	.sidebar {
-		width: 150px;
-		background-color: #c3cbdc;
-		background-image: linear-gradient(147deg, #c3cbdc 0%, #edf1f4 74%);
+	.blog {
+		width: 600px;
+		height: 330px;
+		overflow: hidden;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	.carousel-container {
+		position: relative;
+		width: 100%;
+		height: 100%;
+	}
+
+	.carousel {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+
+	.slide {
+		position: absolute;
+		width: 95%;
+		height: 100%;
+		background: #f4f4f4;
+		padding: 0px 15px;
+		gap: 10px;
 		border-radius: 5px;
-		padding: 10px;
-		float: left;
-		margin-right: 20px;
-	}
-
-	.content {
-		width: calc(100% - 240px);
-		float: left;
-	}
-
-	.project-item {
-		background-color: #c3cbdc;
-		background-image: linear-gradient(147deg, #c3cbdc 0%, #edf1f4 74%);
-		border-radius: 5px;
-		margin-bottom: 20px;
-		padding: 10px;
-	}
-
-	.project-item h2 {
-		font-size: 1.8em;
-	}
-
-	.project-item p {
-		font-size: 1.2em;
-	}
-	.categories {
-		list-style-type: none;
-	}
-	.clearfix::after {
-		content: '';
-		clear: both;
-		display: table;
+		transition: transform 0.3s ease;
 	}
 
 	.grid-wrapper {
@@ -377,31 +324,6 @@
 		display: flex;
 		flex-direction: column;
 		padding-bottom: 20px;
-	}
-
-	.glass-overlay {
-		position: absolute;
-		top: 17%;
-		left: 17%;
-		width: 630px;
-		height: 350px;
-		background: rgba(255, 255, 255, 0.2);
-		backdrop-filter: blur(5px);
-		border-radius: 45px;
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-		pointer-events: none;
-		padding: 7px 12px 8px 12px;
-		z-index: 1;
-		text-align: center;
-	}
-
-	.loader {
-		size: 10rem;
-		margin-top: 70px;
-	}
-	.blink {
-		animation: blink-animation 1s steps(5, start) infinite;
-		-webkit-animation: blink-animation 1s steps(5, start) infinite;
 	}
 
 	@keyframes blink-animation {
