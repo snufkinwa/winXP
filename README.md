@@ -67,7 +67,7 @@ You'll find the classic sections—About, Projects, and Contact—inside the Max
 
 <img src="https://imgur.com/bFIfCeP.png" alt="Loading-Screen" >
 <img src="https://imgur.com/Qf2pkRX.png" alt="Login-Screen" >
-<img src="https://i.ibb.co/b6zRXyq/Desktop-Screen.png" alt="Desktop-Screen" >
+<img src="https://imgur.com/7yKC0bs.png" alt="Desktop-Screen" >
 
 ## To-Do
 
